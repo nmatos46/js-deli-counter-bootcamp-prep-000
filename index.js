@@ -1,11 +1,11 @@
 
-
-function takeANumber(katzDeliLine, newPerson){
-  katzDeliLine.push(newPerson); //add new person to line
-  var position = katzDeliLine.length; //record new person's position
-
+var currentNumber = 1;
+function takeANumber(katzDeliLine){
+  katzDeliLine.push(currentNumber); //add new person to line
+  var position = katzDeliLine[katzDeliLine.length-1]; //record new person's position
+  currentNumber += 1;
   //output welcome message for new person, with position info
-  return `Welcome, ${newPerson}. You are number ${position} in line.`;
+  return `You are number ${position} in line.`;
 
 }
 
